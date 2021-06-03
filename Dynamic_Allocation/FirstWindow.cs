@@ -20,9 +20,9 @@ namespace Dynamic_Allocation
         private void BFButton_Click(object sender, EventArgs e) //最佳适应
         {
             Memory.FF = false;
-            MainWindow w = new MainWindow();
-            w.Show();
-            this.Hide();
+            Program.mwindow = new MainWindow();
+            Program.mwindow.Text = "最佳适应算法";
+            Program.mwindow.ShowDialog();
             System.Diagnostics.Debug.WriteLine("BFB On click");
             System.Diagnostics.Debug.WriteLine("Change to main window");
         }
@@ -31,9 +31,15 @@ namespace Dynamic_Allocation
         {
             Memory.FF = true;
             Program.mwindow = new MainWindow();
+            Program.mwindow.Text = "首次适应算法";
             Program.mwindow.ShowDialog();
             System.Diagnostics.Debug.WriteLine("FFB On click");
             System.Diagnostics.Debug.WriteLine("Change to main window");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

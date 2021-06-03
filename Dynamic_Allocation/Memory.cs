@@ -33,7 +33,7 @@ namespace Dynamic_Allocation
         public static bool FF;
         public List Used;
         public List UnUsed;
-
+        public int AllSize;     //总内存
         public Memory()     //initialize
         {
             Index = 0;
@@ -52,7 +52,8 @@ namespace Dynamic_Allocation
             };      //指令队列
             this.Used = new List();
             this.UnUsed = new List();
-            Piece p0 = new Piece(0, 640);
+            this.AllSize = 640;
+            Piece p0 = new Piece(0, this.AllSize);
             UnUsed.Append(p0);   //初始内存
         }
 
@@ -63,10 +64,8 @@ namespace Dynamic_Allocation
                 if (Index < Ord.Length-1)
                     Program.mwindow.OrderGridView.Rows[Index].DefaultCellStyle.BackColor = Color.White;
                 this.RunOrder(Ord[Index++]);
-                if (Index < Ord.Length)
-                    Program.mwindow.OrderGridView.Rows[Index].DefaultCellStyle.BackColor = Color.Red;
             }
-                
+            Program.mwindow.UpdateWin();   
         }
 
 
@@ -237,7 +236,7 @@ namespace Dynamic_Allocation
             A.InsNext(foot);
         }
 
-        public void merge(Node node)
+        public void merge(Node node)    //合并碎片
         {
             Node A = Head;
             Node N = A.Next;
@@ -252,7 +251,7 @@ namespace Dynamic_Allocation
                 else if (N.Data.Begin + N.Data.Size == node.Data.Begin)   //碎片向前合并
                 {
                     node.Data.Begin = N.Data.Begin;
-                    node.Data.Size += N.Next.Data.Size;
+                    node.Data.Size += N.Data.Size;
                     A.Next = N.Next;
                     N = A.Next;
                 }

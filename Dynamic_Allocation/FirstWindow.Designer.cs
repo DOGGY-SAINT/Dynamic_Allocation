@@ -32,6 +32,7 @@ namespace Dynamic_Allocation
             this.BFButton = new System.Windows.Forms.Button();
             this.FFButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,10 +60,21 @@ namespace Dynamic_Allocation
             // 
             this.flowLayoutPanel1.Controls.Add(this.BFButton);
             this.flowLayoutPanel1.Controls.Add(this.FFButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(108, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(158, 100);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(158, 115);
             this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 30);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "退出";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FirstWindow
             // 
@@ -82,5 +94,6 @@ namespace Dynamic_Allocation
         private System.Windows.Forms.Button BFButton;
         private System.Windows.Forms.Button FFButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
     }
 }
