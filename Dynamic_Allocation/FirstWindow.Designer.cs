@@ -41,6 +41,7 @@ namespace Dynamic_Allocation
             this.BFButton.TabIndex = 1;
             this.BFButton.Text = "最佳适应算法";
             this.BFButton.UseVisualStyleBackColor = true;
+            this.BFButton.Click += new System.EventHandler(this.BFButton_Click);
             // 
             // FFButton
             // 
@@ -50,6 +51,7 @@ namespace Dynamic_Allocation
             this.FFButton.TabIndex = 2;
             this.FFButton.Text = "首次适应算法";
             this.FFButton.UseVisualStyleBackColor = true;
+            this.FFButton.Click += new System.EventHandler(this.FFButton_Click);
             // 
             // FirstWindow
             // 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicAllocation
+namespace Dynamic_Allocation
 {
     class Memory
     {

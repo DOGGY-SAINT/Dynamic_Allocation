@@ -16,5 +16,25 @@ namespace Dynamic_Allocation
         {
             InitializeComponent();
         }
+
+        private void BFButton_Click(object sender, EventArgs e) //最佳适应
+        {
+            Memory.FF = false;
+            MainWindow w = new MainWindow();
+            w.Show();
+            this.Hide();
+            System.Diagnostics.Debug.WriteLine("BFB On click");
+            System.Diagnostics.Debug.WriteLine("Change to main window");
+        }
+
+        private void FFButton_Click(object sender, EventArgs e) //首次适应
+        {
+            Memory.FF = true;
+            MainWindow w = new MainWindow();
+            w.Show();
+            this.Hide();
+            System.Diagnostics.Debug.WriteLine("FFB On click");
+            System.Diagnostics.Debug.WriteLine("Change to main window");
+        }
     }
 }

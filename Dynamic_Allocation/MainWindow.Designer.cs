@@ -30,22 +30,35 @@ namespace Dynamic_Allocation
         private void InitializeComponent()
         {
             this.ReturnButton = new System.Windows.Forms.Button();
+            this.StepButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ReturnButton
             // 
-            this.ReturnButton.Location = new System.Drawing.Point(713, 12);
+            this.ReturnButton.Location = new System.Drawing.Point(688, 12);
             this.ReturnButton.Name = "ReturnButton";
-            this.ReturnButton.Size = new System.Drawing.Size(75, 23);
+            this.ReturnButton.Size = new System.Drawing.Size(100, 30);
             this.ReturnButton.TabIndex = 0;
             this.ReturnButton.Text = "返回首页";
             this.ReturnButton.UseVisualStyleBackColor = true;
+            this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
+            // 
+            // StepButton
+            // 
+            this.StepButton.Location = new System.Drawing.Point(323, 12);
+            this.StepButton.Name = "StepButton";
+            this.StepButton.Size = new System.Drawing.Size(100, 30);
+            this.StepButton.TabIndex = 1;
+            this.StepButton.Text = "单步执行";
+            this.StepButton.UseVisualStyleBackColor = true;
+            this.StepButton.Click += new System.EventHandler(this.StepButton_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.StepButton);
             this.Controls.Add(this.ReturnButton);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
@@ -56,5 +69,6 @@ namespace Dynamic_Allocation
         #endregion
 
         private System.Windows.Forms.Button ReturnButton;
+        private System.Windows.Forms.Button StepButton;
     }
 }

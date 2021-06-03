@@ -8,6 +8,7 @@ namespace Dynamic_Allocation
 {
     static class Program
     {
+        public static FirstWindow window;
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
@@ -16,7 +17,8 @@ namespace Dynamic_Allocation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            window = new FirstWindow();
+            Application.Run(window);
         }
     }
 }

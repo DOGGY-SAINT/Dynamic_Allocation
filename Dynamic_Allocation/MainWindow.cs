@@ -16,5 +16,18 @@ namespace Dynamic_Allocation
         {
             InitializeComponent();
         }
+
+        private void ReturnButton_Click(object sender, EventArgs e)
+        {
+            Program.window.Show();
+            this.Close();
+            System.Diagnostics.Debug.WriteLine("RB On click");
+            System.Diagnostics.Debug.WriteLine("Change to first window");
+        }
+
+        private void StepButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
