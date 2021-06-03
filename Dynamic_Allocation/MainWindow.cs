@@ -12,9 +12,12 @@ namespace Dynamic_Allocation
 {
     public partial class MainWindow : Form
     {
+        public Memory Mem;
         public MainWindow()
         {
             InitializeComponent();
+            Mem = new Memory();
+            Mem.Log();
         }
 
         private void ReturnButton_Click(object sender, EventArgs e)
@@ -27,7 +30,8 @@ namespace Dynamic_Allocation
 
         private void StepButton_Click(object sender, EventArgs e)
         {
-
+            Mem.RunSetp();
+            Mem.Log();
         }
     }
 }

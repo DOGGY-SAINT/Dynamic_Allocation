@@ -35,9 +35,10 @@ namespace Dynamic_Allocation
             // 
             // ReturnButton
             // 
-            this.ReturnButton.Location = new System.Drawing.Point(688, 12);
+            this.ReturnButton.Location = new System.Drawing.Point(516, 10);
+            this.ReturnButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ReturnButton.Name = "ReturnButton";
-            this.ReturnButton.Size = new System.Drawing.Size(100, 30);
+            this.ReturnButton.Size = new System.Drawing.Size(75, 24);
             this.ReturnButton.TabIndex = 0;
             this.ReturnButton.Text = "返回首页";
             this.ReturnButton.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@ namespace Dynamic_Allocation
             // 
             // StepButton
             // 
-            this.StepButton.Location = new System.Drawing.Point(323, 12);
+            this.StepButton.Location = new System.Drawing.Point(242, 10);
+            this.StepButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StepButton.Name = "StepButton";
-            this.StepButton.Size = new System.Drawing.Size(100, 30);
+            this.StepButton.Size = new System.Drawing.Size(75, 24);
             this.StepButton.TabIndex = 1;
             this.StepButton.Text = "单步执行";
             this.StepButton.UseVisualStyleBackColor = true;
@@ -55,13 +57,14 @@ namespace Dynamic_Allocation
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 360);
             this.Controls.Add(this.StepButton);
             this.Controls.Add(this.ReturnButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainWindow";
-            this.Text = "MainWindow";
+            this.Text = "执行";
             this.ResumeLayout(false);
 
         }
