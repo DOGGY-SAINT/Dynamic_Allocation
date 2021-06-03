@@ -9,6 +9,7 @@ namespace Dynamic_Allocation
     static class Program
     {
         public static FirstWindow window;
+        public static MainWindow mwindow;
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>

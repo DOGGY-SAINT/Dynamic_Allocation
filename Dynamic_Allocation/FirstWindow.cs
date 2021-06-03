@@ -30,9 +30,8 @@ namespace Dynamic_Allocation
         private void FFButton_Click(object sender, EventArgs e) //首次适应
         {
             Memory.FF = true;
-            MainWindow w = new MainWindow();
-            w.Show();
-            this.Hide();
+            Program.mwindow = new MainWindow();
+            Program.mwindow.ShowDialog();
             System.Diagnostics.Debug.WriteLine("FFB On click");
             System.Diagnostics.Debug.WriteLine("Change to main window");
         }

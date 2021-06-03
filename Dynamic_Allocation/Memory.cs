@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Dynamic_Allocation
 {
     public class Order
     {
-        public int Type;    //0需求1释放
+        public string Type;    //0需求1释放
         public int User;
         public int Size;    //需求大小
 
-        public Order(int u, int t, int s)
+        public Order(int u, string t, int s)
         {
             this.User = u;
             this.Type = t;
@@ -37,17 +38,17 @@ namespace Dynamic_Allocation
         {
             Index = 0;
             Ord = new Order[11] {
-               new Order(1,0,130) ,
-               new Order(2,0,60) ,
-               new Order(3,0,100) ,
-               new Order(2,1,60) ,
-               new Order(4,0,200) ,
-               new Order(3,1,100) ,
-               new Order(1,1,130) ,
-               new Order(5,0,140) ,
-               new Order(6,0,60) ,
-               new Order(7,0,50) ,
-               new Order(6,1,60) ,
+               new Order(1,"申请",130) ,
+               new Order(2,"申请",60) ,
+               new Order(3,"申请",100) ,
+               new Order(2,"释放",60) ,
+               new Order(4,"申请",200) ,
+               new Order(3,"释放",100) ,
+               new Order(1,"释放",130) ,
+               new Order(5,"申请",140) ,
+               new Order(6,"申请",60) ,
+               new Order(7,"申请",50) ,
+               new Order(6,"释放",60) ,
             };      //指令队列
             this.Used = new List();
             this.UnUsed = new List();
@@ -55,16 +56,23 @@ namespace Dynamic_Allocation
             UnUsed.Append(p0);   //初始内存
         }
 
-        public void RunSetp()
+        public void RunStep()
         {
             if (Index < Ord.Length)
+            {
+                if (Index < Ord.Length-1)
+                    Program.mwindow.OrderGridView.Rows[Index].DefaultCellStyle.BackColor = Color.White;
                 this.RunOrder(Ord[Index++]);
+                if (Index < Ord.Length)
+                    Program.mwindow.OrderGridView.Rows[Index].DefaultCellStyle.BackColor = Color.Red;
+            }
+                
         }
 
 
         public void RunOrder(Order od)
         {
-            if (od.Type == 0)  //申请
+            if (od.Type == "申请")  //申请
             {
                 this.Ask(od.User, od.Size);
             }
